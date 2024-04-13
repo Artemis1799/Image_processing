@@ -1,16 +1,19 @@
+This project is divided into two categories: the first is the algorithmic part, and the second is the web part, where we'll display the results and conclusions of the first part.
+
+
 ## Algorithmic Part:
 
 The basic objective was for the computer to be able to process an image and recreate it. In other words, by giving it an image, it should be able to remake it using the data retrieved when it was shown the first image, but not only that. We want to be able to make operations on the image, such as obtaining the image skeleton and many others.
 
 To simplify our task, we're going to use black and white images, although this also works with grayscale images.
 
-### Step One: The Squared Euclidean Distance Transform (SEDT)
+### Part One: The Squared Euclidean Distance Transform (SEDT)
 
 First, we need to find a way for the computer to record the image data. Since we're working with black and white images, the data is simple: either a pixel is white, or it's black. If you tell me that all we have to do is put in a two-dimensional array at the pixel location, 0 if it's a black pixel, and 1 if it's a white pixel, you'd be right. However, we wanted to do more complex things later on that wouldn't have been possible with a simple array like this.
 
 We also needed to record the distance between a pixel on the shape and a pixel on the background. Example: imagine an image with a black circle, we agree that the closer a pixel is to the edge, the smaller its distance from the image background (in white), and that if we take the pixel at the center of the circle, we have the pixel with the greatest distance from the background. We store all this information in a two-dimensional array that has the same length and width as the image, with 0 if the pixel is white (a background pixel) and X if it's a black pixel (a shape pixel) (X corresponds to the distance between the shape pixel and the background pixel).
 
-To implement this algorithm, we'll use the squared Euclidean distance map. The Euclidean distance squared map is a representation of an image in which each pixel is replaced by the Euclidean distance squared between that pixel and the nearest background pixel. This point can be the center of the image or a specific point. The squared Euclidean distance between two points (x1, y1) and (x2, y2) in two-dimensional space is calculated as follows:
+To implement this algorithm, we'll use the squared Euclidean distance transform. The Euclidean distance squared map is a representation of an image in which each pixel is replaced by the Euclidean distance squared between that pixel and the nearest background pixel. This point can be the center of the image or a specific point. The squared Euclidean distance between two points (x1, y1) and (x2, y2) in two-dimensional space is calculated as follows:
 
 Euclidean distance squared = =(x2 - x1)^2 +(y2 - y1)^2
 
