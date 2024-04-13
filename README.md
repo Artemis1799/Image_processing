@@ -1,27 +1,71 @@
+## Algorithmic Part:
 
-Voici une version corrigée et réorganisée de votre texte :
+The basic objective was for the computer to be able to process an image and recreate it. In other words, by giving it an image, it should be able to remake it using the data retrieved when it was shown the first image, but not only that. We want to be able to make operations on the image, such as obtaining the image skeleton and many others.
 
-Projet GitHub - Résumé
-Ce projet est divisé en deux catégories : la partie algorithmique et la partie web, où les résultats et les conclusions de la première partie sont affichés.
+To simplify our task, we're going to use black and white images, although this also works with grayscale images.
 
-Partie Algorithmique :
-L'objectif principal était de permettre à l'ordinateur de traiter une image et de la reconstruire. Cela signifie qu'il doit être capable de recréer une image donnée, à partir des données récupérées lors de la présentation de l'image initiale. De plus, nous cherchons à réaliser diverses opérations sur l'image, telles que l'obtention du squelette de l'image et d'autres manipulations.
+### Step One: The Squared Euclidean Distance Transform (SEDT)
 
-Pour simplifier cette tâche, nous avons décidé d'utiliser des images en noir et blanc, bien que cela fonctionne également avec des images en nuances de gris.
+First, we need to find a way for the computer to record the image data. Since we're working with black and white images, the data is simple: either a pixel is white, or it's black. If you tell me that all we have to do is put in a two-dimensional array at the pixel location, 0 if it's a black pixel, and 1 if it's a white pixel, you'd be right. However, we wanted to do more complex things later on that wouldn't have been possible with a simple array like this.
 
-Première Étape : La Carte des Distances Euclidiennes au Carré
+We also needed to record the distance between a pixel on the shape and a pixel on the background. Example: imagine an image with a black circle, we agree that the closer a pixel is to the edge, the smaller its distance from the image background (in white), and that if we take the pixel at the center of the circle, we have the pixel with the greatest distance from the background. We store all this information in a two-dimensional array that has the same length and width as the image, with 0 if the pixel is white (a background pixel) and X if it's a black pixel (a shape pixel) (X corresponds to the distance between the shape pixel and the background pixel).
 
-Pour enregistrer les données de l'image, nous devons d'abord trouver un moyen approprié. Étant donné que nous travaillons avec des images en noir et blanc, les données sont simples : chaque pixel est soit blanc, soit noir. Bien qu'il soit tentant d'utiliser un tableau à deux dimensions pour cela, nous avons opté pour une approche plus sophistiquée, car nous prévoyons d'effectuer des opérations plus complexes ultérieurement.
+To implement this algorithm, we'll use the squared Euclidean distance map. The Euclidean distance squared map is a representation of an image in which each pixel is replaced by the Euclidean distance squared between that pixel and the nearest background pixel. This point can be the center of the image or a specific point. The squared Euclidean distance between two points (x1, y1) and (x2, y2) in two-dimensional space is calculated as follows:
 
-Nous devons également enregistrer la distance entre un pixel de la forme et un pixel de l'arrière-plan. Pour ce faire, nous utilisons la carte des distances euclidiennes au carré. Cette carte remplace chaque pixel de l'image par la distance euclidienne au carré entre ce pixel et le pixel de l'arrière-plan le plus proche.
+Euclidean distance squared = =(x2 - x1)^2 +(y2 - y1)^2
 
-Deuxième Partie : Les Boules Maximales
+By replacing each pixel in the image with this value, we obtain a map where higher values represent areas farthest from the nearest background pixel, while lower values represent closer areas.
 
-Plutôt que de parcourir une liste de pixels pour redessiner la forme, nous avons opté pour une approche basée sur des boules maximales. En observant la carte des distances euclidiennes au carré, nous avons réalisé que toutes les formes pouvaient être représentées par des cercles remplis. Cette méthode consiste à garder uniquement les boules maximales, c'est-à-dire celles qui ne sont pas entièrement contenues dans d'autres boules. Nous avons optimisé ce processus en observant que la plupart des centres des boules maximales se trouvent sur l'axe médian de l'image.
+Example image:
 
-Partie Web :
-Pour présenter nos résultats de manière claire, nous avons décidé de les afficher sur une page HTML. Vous trouverez dans le dossier "Web" un fichier HTML à ouvrir pour consulter les résultats.
+In our project, in order to observe differences in complexity and completion time, we created two functions to calculate the map of Euclidean distances to the square, one brute force and one optimized.
 
-Cependant, nous avons également réalisé une deuxième version de la partie web, entièrement en JavaScript. Nous avons mis tous nos efforts pour créer un site élégant, dynamique et interactif. Vous pouvez y accéder via ce lien : Nom du site.
+Once we had our Euclidean distances-to-squares chart, we set up a function to visualize the chart. Background pixels remain white, and shape pixels are displayed according to their distance; the further a pixel is from the background, the more its color will tend toward white, and the closer the pixel is, the more its color will tend toward black.
 
-Pour plus de détails sur les conceptions HTML et JavaScript, une vidéo explicative est disponible ici : Lien vidéo.
+Example:
+
+Normal image then processed image
+
+### Part Two: Maximum Balls
+
+To redraw the shape, we didn't want to simply run through the list and draw a white pixel when the value is 0 and a black pixel when the value is other than 0. We had to find another solution.
+
+Looking at the squared Euclidean distance map and image representations, we noticed that, in reality, all shapes can be drawn with filled circles, whose radii are the square root of the pixel distance stored in the squared Euclidean distance map table. This is why we're going to use the maxiamale ball method.
+
+This method consists in keeping only those balls that are maximal, i.e. that are not entirely contained within another ball. For if a ball is non-maximal, this means that another ball or set of balls can draw the same surface as it, and so, for the sake of optimization, we're going to keep only the maximal balls to display only the circles that are really useful for reconstructing the image.
+
+To find out whether a ball X is maximal, we go through all the other balls in the array, and if the distance between the center of ball X and the center of the ball we've gone through, plus the radius of the smallest circle, is smaller, then it's included in another ball and therefore not maximal. If, after testing with all the balls, ball X is still not declared as "non-maximal", then it is maximal.
+
+Example: tests with radii
+
+However, running an entire course to check whether a single ball is maximal is not at all optimized, especially if there are many other balls to test. This is the skeleton of the image, the white lines seen on the squared Euclidean distance map.
+
+Example of the median axis and circle centers
+
+This is why, in the optimized version, we start by processing circles where the points are on the median axis. This allows us to eliminate non-maximum balls much more quickly, and thus to make faster and faster runs.
+
+We then save the maximum balls in a "Ball" list. "Ball" is a structure where the object has an x and y position of its center, as well as its radius.
+
+If you'd like to know more about the squared Euclidean distance map and maximum balls, I've put together a thesis (by my teacher) which explains the subject in more detail: [Thesis Link](https://perso.liris.cnrs.fr/laure.tougne/theses_doctorants/these_Aurelie_leborgne.pdf)
+
+### Part Three: Image Reconstruction
+
+With this list of "Balls", we can now draw the circles and see that we've got the shape of the original image:
+
+Now all we need to do is fill in the circles to obtain the complete shape:
+
+As for the fidelity of the reproduction, it's 96%. We think that the missing 4% is due to the dpi (dot per inch), which is not the same between the original image and the image obtained after all the operations.
+
+We've also added functions for drawing graphs to see the differences in calculation time, result, etc. between the brute force and optimized methods, and also whether noise had an impact on calculation time or result (noise is a mutation of the image: example image without noise and image with noise).
+
+To create the graphics, we used the "Chart" graphic control.
+
+## Web Part:
+
+To show our results clearly, we decided to display them as an HTML page.
+
+In the Web folder, you'll find the HTML file you need to open to view the page and our results.
+
+However, we wanted to go further and go beyond our limits, so we made a second version of the web part, in JavaScript only. We've put all our efforts into creating an elegant, dynamic, and interactive site, and here's how to access it: [Website Link](https://ezwin.netlify.app)
+
+If you'd like to know more about the design of the first version in HTML and the second version in JavaScript, I've made a video in which I explain the process and our choices in more detail: [Video Link](https://youtu.be/zJ3VeK5o50Q?si=sYNVVdltUfIWi16q)
