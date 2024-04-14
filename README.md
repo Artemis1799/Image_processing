@@ -28,7 +28,8 @@ Once we had our Euclidean distances-to-squares chart, we set up a function to vi
 
 Example:
 
-Normal image then processed image
+![image](https://github.com/Artemis1799/Image_processing/assets/147591539/9b9fae70-5c28-4460-b5c3-3df117451340) ![image](https://github.com/Artemis1799/Image_processing/assets/147591539/048279a9-d2f4-451d-99e2-91920ed77fdb)
+
 
 ### Part Two: Maximum Balls
 
