@@ -45,7 +45,8 @@ Example: tests with radii
 
 However, running an entire course to check whether a single ball is maximal is not at all optimized, especially if there are many other balls to test. This is the skeleton of the image, the white lines seen on the squared Euclidean distance map.
 
-Example of the median axis and circle centers
+![image](https://github.com/Artemis1799/Image_processing/assets/147591539/fd124629-3ed0-4dda-8be1-a44dc08b6e95) ![image](https://github.com/Artemis1799/Image_processing/assets/147591539/1e84682e-85bb-446a-b9ef-05c304e9cb39)
+
 
 This is why, in the optimized version, we start by processing circles where the points are on the median axis. This allows us to eliminate non-maximum balls much more quickly, and thus to make faster and faster runs.
 
