@@ -104,8 +104,8 @@ We've also added functions for drawing graphs to see the differences in calculat
 
 Example of an image with a noise level of 0 (no noise) and an image with a noise level of 4 (big mutation):
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/8dc0b544-340a-4a3d-9235-eb0aa281e3a9" style="height: 450px;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/410b586b-9ed2-43bb-b528-509d0a7dc894" style="height: 450px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/8dc0b544-340a-4a3d-9235-eb0aa281e3a9" style="height: 350px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/410b586b-9ed2-43bb-b528-509d0a7dc894" style="height: 350px;">
 </div>
 
 
