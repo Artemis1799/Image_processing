@@ -94,10 +94,9 @@ With this list of "Balls", we can now draw the circles and see that we've got th
 
 Now all we need to do is fill in the circles to obtain the complete shape:
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/353d8d8e-b39b-4916-8a97-7a5c3e65adc4" style="height: 380px;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/d0712006-a098-444c-81c7-569da97c3dce" style="height: 380px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/353d8d8e-b39b-4916-8a97-7a5c3e65adc4" style="height: 400px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/75b177f1-196b-476b-a8d7-4378d88829f3" style="height: 400px;">
 </div>
-
 
 As for the fidelity of the reproduction, it's 96%. We think that the missing 4% is due to the dpi (dot per inch), which is not the same between the original image and the image obtained after all the operations.
 
