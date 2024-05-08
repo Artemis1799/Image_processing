@@ -72,20 +72,16 @@ One of the reasons we decided to store the image data with maximum balls rather 
 
 Example:
 
+<pre>
 [337, 588, 1044]
-
 [509, 665, 1025]
 [405, 331, 1025]
-
 [342, 585, 1018]
-
 [402, 329, 1018]
-
 [500, 658, 970]
-
 [256, 238, 932]
-
 ...
+</pre>
 
 We could simply write a script that reads each line of the text file and draws the balls. That's what we're going to do in part 3.
 
