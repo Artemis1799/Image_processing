@@ -57,7 +57,7 @@ However, running an entire course to check whether a single ball is maximal is n
   <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/fd124629-3ed0-4dda-8be1-a44dc08b6e95" style="height: 300px;">
   <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/1e84682e-85bb-446a-b9ef-05c304e9cb39" style="height: 300px;">
 </div>
-![image0](https://github.com/Artemis1799/Image_processing/assets/147591539/57db2ea2-02ee-4190-8ec2-a6777c953995)
+![7](https://github.com/Artemis1799/Image_processing/assets/147591539/4703bc78-3e31-4312-a126-b69545bbd2a1)
 
 This is why, in the optimized version, we start by processing circles where the points are on the median axis. This allows us to eliminate non-maximum balls much more quickly, and thus to make faster and faster runs.
 
