@@ -34,11 +34,12 @@ Example:
 <div style="display: flex; justify-content: space-around;">
   <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/9b9fae70-5c28-4460-b5c3-3df117451340" style="height: 400px;">
   <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/048279a9-d2f4-451d-99e2-91920ed77fdb" style="height: 400px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/b3292dec-2c45-47e1-ad56-16d61cdf2426" style="height: 400px;">
 </div>
-![image](https://github.com/Artemis1799/Image_processing/assets/147591539/fd124629-3ed0-4dda-8be1-a44dc08b6e95)
 
 
 
+![Capture d'écran 2023-09-29 085716]()
 
 ### Part Two: Maximum Balls
 
