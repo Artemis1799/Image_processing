@@ -123,7 +123,7 @@ If you'd like to know more about the design of the first version in HTML and the
 
 ![home2](https://github.com/Artemis1799/Image_processing/assets/147591539/25f2d361-0487-492e-a3ba-0e0945ad540b)
 <div style="display: flex; justify-content: space-around;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/c445d2ca-592c-41a6-9862-43380669cd14" style="height: 500px;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/d7c5a590-641a-4702-9be4-0e49312c359d" style="height: 500px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/c445d2ca-592c-41a6-9862-43380669cd14" style="height: 550px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/d7c5a590-641a-4702-9be4-0e49312c359d" style="height: 550px;">
   <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/801b54d8-538e-4844-a201-2804286c777a">
 </div>
