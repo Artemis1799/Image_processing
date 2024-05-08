@@ -54,6 +54,7 @@ Example:
 
 This example shows the 3 situations. The two top situations are the situations where ball X is not included in another ball (so can be a maximum ball). And the bottom situation is the case where ball X is included in another ball (so cannot be a maximum ball).
 
+
 However, it is not at all optimised to carry out a complete run to check whether a single ball is maximal, especially if there are many other balls to test. We then noticed that most of the centres of the maximum balls lie on the median axis, which is the skeleton of the image, the white lines visible on the squared Euclidean distance map.
 
 <div style="display: flex; justify-content: space-between;">
@@ -66,21 +67,31 @@ This is why, in the optimized version, we start by processing circles where the 
 
 We then save the maximum balls in a "Ball" list. "Ball" is a structure where the object has an x and y position of its center, as well as its radius.
 
+
 One of the reasons we decided to store the image data with maximum balls rather than a simple two-dimensional array with pixel values is that with maximum balls it's simpler and faster. In fact, it's easy to write the contents of an image in a text file: you make a list of all the maximum balls. Write the coordinates of the centre of the ball and the radius.
 
 Example:
+
 [337, 588, 1044]
+
 [509, 665, 1025]
+
 [405, 331, 1025]
+
 [342, 585, 1018]
+
 [402, 329, 1018]
+
 [500, 658, 970]
+
 [256, 238, 932]
+
 ...
 
 We could simply write a script that reads each line of the text file and draws the balls. That's what we're going to do in part 3.
 
 If you'd like to know more about the squared Euclidean distance map and maximum balls, I've put together a thesis (by my teacher) which explains the subject in more detail: [Thesis Link](https://perso.liris.cnrs.fr/laure.tougne/theses_doctorants/these_Aurelie_leborgne.pdf)
+
 
 ### Part Three: Image Reconstruction
 
