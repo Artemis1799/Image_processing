@@ -45,9 +45,13 @@ Looking at the squared Euclidean distance map and image representations, we noti
 
 This method consists in keeping only those balls that are maximal, i.e. that are not entirely contained within another ball. For if a ball is non-maximal, this means that another ball or set of balls can draw the same surface as it, and so, for the sake of optimization, we're going to keep only the maximal balls to display only the circles that are really useful for reconstructing the image.
 
-To find out whether a ball X is maximal, we go through all the other balls in the array, and if the distance between the center of ball X and the center of the ball we've gone through, plus the radius of the smallest circle, is smaller, then it's included in another ball and therefore not maximal. If, after testing with all the balls, ball X is still not declared as "non-maximal", then it is maximal.
+To find out whether an X-ball is maximum, we review all the other balls in the table, and if the distance between the centre of the X-ball and the centre of the ball we have reviewed, plus the radius of the smallest circle, is smaller than the radius of the largest circle, then it is included in another ball and is therefore not maximum. If, after testing all the balls, ball X is still not declared "non-maximal", then it is maximal.
 
-Example: tests with radii
+Example:
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/0c434272-dafb-44cc-98d6-7dd38b992f4f" style="height: 380px;">
+</div>
+Sur cette exemple on peut appercevoir les 3 situations.
 
 However, running an entire course to check whether a single ball is maximal is not at all optimized, especially if there are many other balls to test. This is the skeleton of the image, the white lines seen on the squared Euclidean distance map.
 
