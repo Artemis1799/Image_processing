@@ -19,7 +19,7 @@ Euclidean distance squared = (x2 - x1)^2 +(y2 - y1)^2
 
 By replacing each pixel in the image with this value, we obtain a map where higher values represent areas farthest from the nearest background pixel, while lower values represent closer areas.
 
-<div style="display: flex;">
+<div style="display: flex; justify-content: space-around;">
   <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/f72a727b-1a4d-4839-96d7-bc6f71840c71" style="height: 300px; margin-right: 20px;">
   <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/83cf186e-1332-422b-8226-7dbb08968acb" style="height: 300px;">
 </div>
@@ -31,9 +31,9 @@ Once we had our Euclidean distances-to-squares chart, we set up a function to vi
 
 Example:
 
-<div style="display: flex;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/9b9fae70-5c28-4460-b5c3-3df117451340" style="height: 300px; margin-right: 20px;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/048279a9-d2f4-451d-99e2-91920ed77fdb" style="height: 300px;">
+<div style="display: flex; justify-content: space-around;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/9b9fae70-5c28-4460-b5c3-3df117451340" style="height: 500px; margin-right: 20px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/048279a9-d2f4-451d-99e2-91920ed77fdb" style="height: 500px;">
 </div>
 
 
