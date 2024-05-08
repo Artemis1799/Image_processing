@@ -3,7 +3,7 @@ This project is divided into two categories: the first is the algorithmic part, 
 
 ## Algorithmic Part:
 
-The basic objective was for the computer to be able to process an image and recreate it. In other words, by giving it an image, it should be able to remake it using the data retrieved when it was shown the first image, but not only that. We want to be able to make operations on the image, such as obtaining the image skeleton and many others.
+The basic objective was for the computer to be able to process an image and recreate it. In other words, by giving it an image, it should be able to remake it using the data retrieved when it was shown the first image, but not only that. We want to be able to perform operations on the image, such as obtaining the image skeleton, storing the image data in a text file and many others.
 
 To simplify our task, we're going to use black and white images, although this also works with grayscale images.
 
@@ -15,7 +15,7 @@ We also needed to record the distance between a pixel on the shape and a pixel o
 
 To implement this algorithm, we'll use the squared Euclidean distance transform. The Euclidean distance squared map is a representation of an image in which each pixel is replaced by the Euclidean distance squared between that pixel and the nearest background pixel. This point can be the center of the image or a specific point. The squared Euclidean distance between two points (x1, y1) and (x2, y2) in two-dimensional space is calculated as follows:
 
-Euclidean distance squared = =(x2 - x1)^2 +(y2 - y1)^2
+Euclidean distance squared = (x2 - x1)^2 +(y2 - y1)^2
 
 By replacing each pixel in the image with this value, we obtain a map where higher values represent areas farthest from the nearest background pixel, while lower values represent closer areas.
 
