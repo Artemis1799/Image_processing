@@ -49,9 +49,11 @@ To find out whether an X-ball is maximum, we review all the other balls in the t
 
 Example:
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/0c434272-dafb-44cc-98d6-7dd38b992f4f" style="height: 380px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/0c434272-dafb-44cc-98d6-7dd38b992f4f" style="height: 500px;">
 </div>
+
 Sur cette exemple on peut appercevoir les 3 situations.
+
 
 However, running an entire course to check whether a single ball is maximal is not at all optimized, especially if there are many other balls to test. This is the skeleton of the image, the white lines seen on the squared Euclidean distance map.
 
