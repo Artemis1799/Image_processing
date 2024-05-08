@@ -35,7 +35,7 @@ Example:
   <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/9b9fae70-5c28-4460-b5c3-3df117451340" style="height: 400px;">
   <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/048279a9-d2f4-451d-99e2-91920ed77fdb" style="height: 400px;">
 </div>
-!![image](https://github.com/Artemis1799/Image_processing/assets/147591539/fd124629-3ed0-4dda-8be1-a44dc08b6e95)
+![image](https://github.com/Artemis1799/Image_processing/assets/147591539/fd124629-3ed0-4dda-8be1-a44dc08b6e95)
 
 
 
