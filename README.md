@@ -32,8 +32,8 @@ Once we had our Euclidean distances-to-squares chart, we set up a function to vi
 Example:
 
 <div style="display: flex; justify-content: space-around;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/9b9fae70-5c28-4460-b5c3-3df117451340" style="height: 500px; margin-right: 20px;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/048279a9-d2f4-451d-99e2-91920ed77fdb" style="height: 500px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/9b9fae70-5c28-4460-b5c3-3df117451340" style="height: 400px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/048279a9-d2f4-451d-99e2-91920ed77fdb" style="height: 400px;">
 </div>
 
 
