@@ -52,8 +52,8 @@ Example: tests with radii
 However, running an entire course to check whether a single ball is maximal is not at all optimized, especially if there are many other balls to test. This is the skeleton of the image, the white lines seen on the squared Euclidean distance map.
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/5798b7f3-399d-4302-96a0-379629d67554" style="height: 300px;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/d0712006-a098-444c-81c7-569da97c3dce" style="height: 300px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/5798b7f3-399d-4302-96a0-379629d67554" style="height: 450px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/d0712006-a098-444c-81c7-569da97c3dce" style="height: 450px;">
 </div>
 
 
