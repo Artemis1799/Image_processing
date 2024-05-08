@@ -19,7 +19,10 @@ Euclidean distance squared = (x2 - x1)^2 +(y2 - y1)^2
 
 By replacing each pixel in the image with this value, we obtain a map where higher values represent areas farthest from the nearest background pixel, while lower values represent closer areas.
 
-![image](https://github.com/Artemis1799/Image_processing/assets/147591539/f72a727b-1a4d-4839-96d7-bc6f71840c71) ![image](https://github.com/Artemis1799/Image_processing/assets/147591539/83cf186e-1332-422b-8226-7dbb08968acb)
+<div style="display: flex;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/f72a727b-1a4d-4839-96d7-bc6f71840c71" style="max-width: 50%; margin-right: 10px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/83cf186e-1332-422b-8226-7dbb08968acb" style="max-width: 50%;">
+</div>
 
 
 In our project, in order to observe differences in complexity and completion time, we created two functions to calculate the map of Euclidean distances to the square, one brute force and one optimized.
