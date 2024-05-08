@@ -34,12 +34,8 @@ Example:
 <div style="display: flex; justify-content: space-around;">
   <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/9b9fae70-5c28-4460-b5c3-3df117451340" style="height: 400px;">
   <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/048279a9-d2f4-451d-99e2-91920ed77fdb" style="height: 400px;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/b3292dec-2c45-47e1-ad56-16d61cdf2426" style="height: 400px;">
 </div>
 
-
-
-![Capture d'écran 2023-09-29 085716]()
 
 ### Part Two: Maximum Balls
 
@@ -57,8 +53,9 @@ However, running an entire course to check whether a single ball is maximal is n
 
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/fd124629-3ed0-4dda-8be1-a44dc08b6e95" style="height: 300px;">
-  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/1e84682e-85bb-446a-b9ef-05c304e9cb39" style="height: 300px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/d0712006-a098-444c-81c7-569da97c3dce" style="height: 300px;">
 </div>
+
 ![7](https://github.com/Artemis1799/Image_processing/assets/147591539/4703bc78-3e31-4312-a126-b69545bbd2a1)
 
 This is why, in the optimized version, we start by processing circles where the points are on the median axis. This allows us to eliminate non-maximum balls much more quickly, and thus to make faster and faster runs.
