@@ -100,7 +100,14 @@ Now all we need to do is fill in the circles to obtain the complete shape:
 
 As for the fidelity of the reproduction, it's 96%. We think that the missing 4% is due to the dpi (dot per inch), which is not the same between the original image and the image obtained after all the operations.
 
-We've also added functions for drawing graphs to see the differences in calculation time, result, etc. between the brute force and optimized methods, and also whether noise had an impact on calculation time or result (noise is a mutation of the image: example image without noise and image with noise).
+We've also added functions for drawing graphs to see the differences in calculation time, result, etc. between the brute force and optimized methods, and also whether noise had an impact on calculation time or result. Noise is a mutation of the image. 
+
+Example of an image with a noise level of 0 (no noise) and an image with a noise level of 4 (big mutation):
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/8dc0b544-340a-4a3d-9235-eb0aa281e3a9" style="height: 450px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/410b586b-9ed2-43bb-b528-509d0a7dc894" style="height: 450px;">
+</div>
+
 
 To create the graphics, we used the "Chart" graphic control.
 
