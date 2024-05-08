@@ -122,6 +122,8 @@ However, we wanted to go further and go beyond our limits, so we made a second v
 If you'd like to know more about the design of the first version in HTML and the second version in JavaScript, I've made a video in which I explain the process and our choices in more detail: [Video Link](https://youtu.be/zJ3VeK5o50Q?si=sYNVVdltUfIWi16q)
 
 ![home2](https://github.com/Artemis1799/Image_processing/assets/147591539/25f2d361-0487-492e-a3ba-0e0945ad540b)
-![5Colored](https://github.com/Artemis1799/Image_processing/assets/147591539/c445d2ca-592c-41a6-9862-43380669cd14)
+<div style="display: flex; justify-content: space-around;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/c445d2ca-592c-41a6-9862-43380669cd14" style="height: 400px;">
+  <img src="https://github.com/Artemis1799/Image_processing/assets/147591539/d7c5a590-641a-4702-9be4-0e49312c359d" style="height: 400px;">
+</div>
 ![14](https://github.com/Artemis1799/Image_processing/assets/147591539/801b54d8-538e-4844-a201-2804286c777a)
-![19Colored](https://github.com/Artemis1799/Image_processing/assets/147591539/d7c5a590-641a-4702-9be4-0e49312c359d)
